@@ -1,7 +1,7 @@
 # Deploy Whisper Anywhere
-Example code for our tutorial on Deploying Whisper Anywhere with Muna
+Example code for our tutorial on [Deploying Whisper Anywhere with Muna]()
 
-The tutorial is available *here*.
+The tutorial is available at ...
 
 ## Running this Code
 
