@@ -1,6 +1,6 @@
 # Whisper Transcription with Muna
 
-A simple React app that transcribes audio files using Whisper via Muna.
+This repository contains some example code for Part 3 of a tutorial on [Deploying Whisper Anywhere with Muna]().  
 
 ## Setup
 
@@ -24,24 +24,9 @@ npm run dev
 
 ## How It Works
 
-This app implements audio transcription similar to the object-detection example but adapted for Whisper:
+The app demonstrates how to use the Muna predictor for Whisper transcription that we wrote in [Part 1]() and the compiled with Muna in [Part 2](). Details are available in [Part 3]().
 
-### Architecture
-
-1. **Audio Upload**: Users can drag & drop or select audio files (WAV, MP3, M4A, FLAC, OGG, WebM)
-
-2. **Audio Processing**: The `useAudioUpload` hook automatically converts uploaded audio to:
-   - 16 kHz sample rate
-   - Mono channel (if stereo/multi-channel)
-   - Float32Array format
-
-3. **Muna Prediction**: Calls the `@my-muna-id/whisper` predictor with:
-   - Input: 2D array with shape `(1, N)` where N is the number of audio samples
-   - Output: String containing the transcribed text
-
-4. **API Route**: The `/api/predictions` route handles authentication with Muna using the server-side access key, keeping it secure and never exposing it to the browser
-
-### File Structure
+### Files 
 
 ```
 Part3/
@@ -59,9 +44,9 @@ Part3/
 └── .env.local                          # Environment variables (not committed)
 ```
 
-## Expected Whisper Predictor Interface
+## The Muna Whisper Predictor Interface
 
-The app expects a Muna predictor at `@my-muna-id/whisper` with:
+The app uses a Muna Whsiper predictor with:
 
 **Input:**
 - `audio`: 2D array (shape: `(1, N)`) of audio samples at 16kHz sample rate
@@ -69,11 +54,6 @@ The app expects a Muna predictor at `@my-muna-id/whisper` with:
 **Output:**
 - String containing the transcribed text
 
-This matches the interface of the Python function in `/home/anon/Work/fxn.ai/Code/src/current/py2cpp/test/py/whisper_onnx.py:transcribe_audio()`
+## Support
 
-## Notes
-
-- The Whisper predictor (`@my-muna-id/whisper`) does not exist yet - this app is built in anticipation of its interface
-- Audio conversion to 16kHz mono happens in the browser using the Web Audio API
-- The actual prediction runs client-side in WebAssembly (similar to the object-detection example)
-- The server-side API route only handles authentication and configuration, not the actual inference
+For questions and support, visit the Muna team on [our Slack community](https://muna.ai/slack).
