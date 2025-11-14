@@ -41,9 +41,10 @@ pip install -r requirements.txt
 python whisper_muna.py
 ```
 
-Please see [the tutorial]() for more details.
 
 ### Running Part 3
+
+Part 3 of this tutorial describes how to run the Whisper predictor you compiled in Part in simple Web application.
 
 For details on running Part 3 of this tutorial, please see the [Part_3/README.md](/Part_3/).
 

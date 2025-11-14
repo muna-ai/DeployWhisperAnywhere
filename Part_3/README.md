@@ -15,21 +15,21 @@ Edit `.env.local` and set your actual Muna access key:
 MUNA_ACCESS_KEY=your_actual_muna_access_key
 ```
 
-2. Edit [src/app/page.tsx](src/app/page.tsx#L57) to replace'@my-muna-id' with your Muna id:
+3. Edit [src/app/page.tsx](src/app/page.tsx#L57) to replace'@my-muna-id' with your Muna id:
 ```JavaScript
  tag: '@my-muna-id/whisper'
 ```
 
-3. Run the development server:
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## How It Works
 
-The app demonstrates how to use the Muna predictor for Whisper transcription that we wrote in [Part 1]() and the compiled with Muna in [Part 2](). Details are available in [Part 3]().
+The app demonstrates how to use the Muna predictor for Whisper transcription that we wrote in [Part 1]() and then compiled with Muna in [Part 2](). Details are available in [Part 3]().
 
 ### Files 
 
