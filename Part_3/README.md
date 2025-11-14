@@ -4,7 +4,7 @@ This repository contains some example code for Part 3 of a tutorial on [Deployin
 
 ## Setup
 
-1. Install dependencies:
+1. Install dependencies (inside the Part_3 directory):
 ```bash
 npm install
 ```
