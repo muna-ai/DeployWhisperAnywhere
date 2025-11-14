@@ -44,10 +44,12 @@ python whisper_muna.py
 
 ### Running Part 3
 
-Part 3 of this tutorial describes how to run the Whisper predictor you compiled in Part in simple Web application.
+Part 3 of this tutorial describes how to use the Whisper predictor you
+compiled in Part 2 in a simple Web application.
 
-For details on running Part 3 of this tutorial, please see the [Part_3/README.md](/Part_3/).
+For details on running Part 3, please see the [Part_3/README.md](/Part_3/).
 
 ## Support
 
-For questions and support, visit the Muna team on [our Slack community](https://muna.ai/slack).
+For questions and support, visit the Muna team on [our Slack
+community](https://muna.ai/slack).
