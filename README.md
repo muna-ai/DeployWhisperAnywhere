@@ -45,7 +45,7 @@ Please see [the tutorial]() for more details.
 
 ### Running Part 3
 
-For details on running Part 3 of this tutorial, please see the [Part_3/README.md](/Part_3/README.md).
+For details on running Part 3 of this tutorial, please see the [Part_3/README.md](/Part_3/).
 
 ## Support
 

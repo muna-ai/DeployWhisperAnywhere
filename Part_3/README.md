@@ -15,6 +15,11 @@ Edit `.env.local` and set your actual Muna access key:
 MUNA_ACCESS_KEY=your_actual_muna_access_key
 ```
 
+2. Edit [src/app/page.tsx](src/app/page.tsx#L57) to replace'@my-muna-id' with your Muna id:
+```JavaScript
+ tag: '@my-muna-id/whisper'
+```
+
 3. Run the development server:
 ```bash
 npm run dev
