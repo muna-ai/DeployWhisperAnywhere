@@ -1,4 +1,4 @@
-# Whisper Transcription with Muna
+# Deploying Whisper Anywhere with Muna (Part 3)
 
 This repository contains some example code for Part 3 of a tutorial on [Deploying Whisper Anywhere with Muna]().  
 
