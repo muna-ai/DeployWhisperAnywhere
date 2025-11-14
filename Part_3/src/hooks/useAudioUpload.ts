@@ -50,10 +50,25 @@ export function useAudioUpload(): UseAudioUploadReturn {
         }
       }
 
+      // Pad or trim to exactly 30 seconds (480,000 samples at 16kHz)
+      const targetLength = 480000; // 16000 Hz * 30 seconds
+      const processedAudio = new Float32Array(targetLength);
+
+      if (audioData.length >= targetLength) {
+        // Trim to 30 seconds
+        processedAudio.set(audioData.subarray(0, targetLength));
+        console.log(`Audio trimmed from ${(audioData.length / 16000).toFixed(2)}s to 30s`);
+      } else {
+        // Pad with zeros to 30 seconds
+        processedAudio.set(audioData);
+        // Remaining elements are already zeros (default for Float32Array)
+        console.log(`Audio padded from ${(audioData.length / 16000).toFixed(2)}s to 30s`);
+      }
+
       if (!isMountedRef.current) return;
 
-      console.log(`Audio loaded: ${audioData.length} samples at 16kHz (${(audioData.length / 16000).toFixed(2)}s)`);
-      setAudioArray(audioData);
+      console.log(`Audio processed: ${processedAudio.length} samples at 16kHz (${(processedAudio.length / 16000).toFixed(2)}s)`);
+      setAudioArray(processedAudio);
     } catch (error) {
       console.error('Failed to load audio:', error);
       if (isMountedRef.current) {
